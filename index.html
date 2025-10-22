@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>You, In Every Line</title>
+  <style>
+    :root {
+      --bg: #0f1724;
+      --accent: #ff6b81;
+    }
+
+    html, body {
+      height: 100%;
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      color: #e6eef8;
+    }
+
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background:
+        radial-gradient(1200px 600px at 10% 10%, rgba(255,107,129,0.08), transparent 6%),
+        radial-gradient(900px 400px at 90% 90%, rgba(86,180,255,0.04), transparent 6%),
+        var(--bg);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .main {
+      padding: 20px 0;
+      margin: auto;
+      width: 900px;
+      background-color: #0f172488;
+      text-align: center;
+      color: white;
+      box-shadow: 0 8px 30px rgba(2,6,23,0.6), inset 0 1px 0 rgba(255,255,255,0.02);
+      border: 1px solid rgba(255,255,255,0.03);
+    }
+
+    .start {
+      margin-top: 0px;
+      font-size: 1.25rem;
+      font-weight: bold;
+    }
+
+    .stanza {
+      position: relative;
+      margin: auto;
+      width: 850px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      margin-top: 1rem;
+      padding: 1.1rem;
+      border-radius: 19px;
+      line-height: 1.65;
+      font-size: 1.05rem;
+      overflow: hidden;
+      perspective: 1000px;
+    }
+
+    /* 3D spinning heart in the BACKGROUND */
+    .heart {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 600px;
+      height: 600px;
+      background-color: var(--accent);
+      transform: translate(-50%, -50%) rotateY(0deg) rotate(-45deg);
+      transform-style: preserve-3d;
+      animation: spin3D 12s linear infinite;
+      opacity: 0.08;
+      filter: drop-shadow(0 0 60px rgba(255,107,129,0.4));
+      z-index: 0; /* behind the text */
+    }
+
+    .heart::before,
+    .heart::after {
+      content: "";
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      background-color: var(--accent);
+      border-radius: 50%;
+    }
+
+    .heart::before {
+      top: -300px;
+      left: 0;
+    }
+
+    .heart::after {
+      left: 300px;
+      top: 0;
+    }
+
+    @keyframes spin3D {
+      0%   { transform: translate(-50%, -50%) rotateY(0deg) rotate(-45deg); }
+      50%  { transform: translate(-50%, -50%) rotateY(180deg) rotate(-45deg); }
+      100% { transform: translate(-50%, -50%) rotateY(360deg) rotate(-45deg); }
+    }
+
+    /* Make sure the text stays on top */
+    .stanza > *:not(.heart) {
+      position: relative;
+      z-index: 2;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="main">
+    <div class="start">To my significant other</div>
+    <div class="stanza">
+      <div class="heart"></div>
+      In your eyes, I found the place where all my lost pieces belong<br><br>
+      a quiet kind of melody that's been my heart's true song<br><br>
+      i hear your voice and the noise of life fades away<br><br>
+      your voice is a song my heart longs to play<br><br>
+      you are my 8th wonder of the world<br><br>
+      you give beauty a more ethereal rendition, it's like you carry the beauty of the universe in your honesty<br><br>
+      with you,my heart rushes with peace,like waves along a coast<br><br>
+      you are my proverbs 18 woman,a rare grace,a favor heaven chose to place<br><br>
+      your smile softens storms within my soul,her love turns ordinary days to gold<br><br>
+      you speak words with your eyes and every glance feels like poetry in motion<br><br>
+      In your gaze I find devotion, a heart stirring potion<br><br>
+      You complete my equation, where I and U meet, the sum is love, eternal and sweet<br><br>
+      I hear your laugh and I want to thank God on everyone's behalf<br><br>
+      You are proof that God listens, cause everything I prayed for even more is embodied in you<br><br>
+      If the sun ever stopped to shine, no one would notice cause as soon as you smile the world would light up<br><br>
+      I'm so lucky God let me exist at the same time as you<br><br>
+      You came when my heart was sealed behind iron doors, yet you slipped through the guards of my soul<br><br>
+      I knew something was special about you from that moment on<br><br>
+      Your beauty a fact, the softness of your cadence<br><br>
+      I think you're really pretty, it's pretty easy to see<br><br>
+      but the prettiest thing about you is your soul<br><br>
+      Your type of beauty is the kind in museums, if it were in painting it would be The Monalisa<br><br>
+      mysterious, timeless, and impossible to forget<br><br>
+      I could keep writing about you but I don't think I have enough words in my vocabulary to capture what my heart sees<br><br>
+      For beauty like yours exists beyond the reach of language
+    </div>
+  </div>
+</body>
+</html>
